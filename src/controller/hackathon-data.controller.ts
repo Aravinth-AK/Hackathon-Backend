@@ -25,9 +25,9 @@ export class VoicePatternController {
     private validateIncomingReq = (request: Request, response: Response, next: NextFunction) => {
         const validator = new ValidatorHelper();
         const schema = new ThesisSchema();
-        console.log(request.body);
+
         validator.jsonValidator(schema.validateProjectReqBody(), request.body).then(validReq => {
-            console.log(validReq)
+
             if (!validReq) {
                 return Api.invalid(request, response, 'Data is Required');
             }
@@ -39,12 +39,18 @@ export class VoicePatternController {
 
     public async addThesisData(req: Request, res: Response, next: NextFunction) {
         const thesisData = req.body;
+        let Message={};
         const detectQuery=new DataEntryManager();
        await detectQuery.dataEntery(thesisData).then(data=>{
-        return Api.ok(req, res, data);
-       }),err=>{
-        return Api.badRequest(req, res, 'Parse API works fine');
-       }
+        Message['count']=data;
+        Message['Message']="Data saved Successfully";
+        return Api.ok(req, res, Message);
+       }).catch(err  =>{
+        if(err.code=11000)
+        Message['Message']=`Duplicate record. Please check the Phenotype Id`
+
+        return Api.badRequest(req, res, Message);
+       })
     }
 
 

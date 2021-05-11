@@ -5,6 +5,8 @@ const swaggerDocument = require('./swagger-docs/api.swagger.json');
 const path = require('path');
 const appConfig = require('./config/app.config.json').AppConfig;
 
+
+
 import * as http from 'http';
 import * as compression from 'compression';
 import * as express from 'express';
@@ -41,6 +43,7 @@ export class WebApi {
             req['rootPath'] = __dirname;
             next();
         });
+
         Logger.ConfigureLogger();
         // Logger.configureErrorLogger(this.app);
     }
@@ -52,6 +55,7 @@ export class WebApi {
         this.app.get('/api', (req, res) => {
             res.send('FSS API Contest - Team AppComposer');
         });
+
         this.app.use('/api-docs/api-contest', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
         this.app.use('/static', express.static(__dirname));
         this.app.on('uncaughtException', (err) => {
@@ -69,6 +73,11 @@ export class WebApi {
                 Logger.error('', req.body, req);
             }
             Logger.error('', err, req);
+            if(err.status===401)
+            {
+                Api.unauthorized(req, res, err);
+            }
+            else
             Api.serverError(req, res, err);
         });
 
