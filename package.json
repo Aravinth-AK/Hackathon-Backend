@@ -16,7 +16,7 @@
   "author": "TeamAppComposer",
   "license": "ISC",
   "dependencies": {
-    "@hapi/joi": "*",
+    "@hapi/joi": "^17.1.1",
     "@types/body-parser": "1.17.0",
     "@types/chai": "^4.2.7",
     "@types/chai-http": "^4.2.0",
@@ -38,7 +38,7 @@
     "express-jwt": "^6.0.0",
     "https": "^1.0.0",
     "ip": "^1.1.5",
-    "joi": "*",
+    "joi": "^13.1.0",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.15",
     "mocha": "^7.0.0",
