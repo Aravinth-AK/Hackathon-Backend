@@ -11,6 +11,7 @@ export class ThesisSchema {
         symptoms: joi.string().required(),
         disorder: joi.string().required(),
         Diagnosis: joi.string().required(),
+        userId:joi.string().required()
     })
 }
 }

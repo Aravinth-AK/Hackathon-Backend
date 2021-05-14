@@ -14,7 +14,8 @@ export class VoicePatternController {
     public static route = '/api/hackathon';
     public router: Router = Router();
     constructor() {
-        this.router.post('/addThesis',this.validateIncomingReq, this.addThesisData)
+        this.router.post('/addThesis',this.validateIncomingReq, this.addThesisData),
+        this.router.post('/totalCount', this.getDataCount),
         this.router.get('/', this.test);
     }
 
@@ -47,12 +48,27 @@ export class VoicePatternController {
         return Api.ok(req, res, Message);
        }).catch(err  =>{
         if(err.code=11000)
-        Message['Message']=`Duplicate record. Please check the Phenotype Id`
+        Message['Message']=`Duplicate record. Record already registered`
 
         return Api.badRequest(req, res, Message);
        })
     }
 
+
+    public async getDataCount(req: Request, res: Response, next: NextFunction) {
+        let Message={};
+        const detectQuery=new DataEntryManager();
+       await detectQuery.getRecordCount(req.body).then(data=>{
+        Message['count']=data;
+        Message['Message']="total records";
+        return Api.ok(req, res, Message);
+       }).catch(err  =>{
+        if(err.code=11000)
+        Message['Message']=`Duplicate record. Please check the Phenotype Id`
+
+        return Api.badRequest(req, res, Message);
+       })
+    }
 
 
     public async test(req: Request, res: Response, next: NextFunction) {

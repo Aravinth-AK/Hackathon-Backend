@@ -1,5 +1,3 @@
-import { throws } from 'assert';
-import { ResMsg } from '../enums/resMsg.enum';
 import { CommonHelper } from '../helper';
 
 
@@ -13,7 +11,7 @@ export class DataEntryManager {
             try {
                 instance.insertOne(data).then(res => {
                     if (res.insertedId)
-                        instance.find().count().then(result => {
+                        instance.find({userId : data.userId}).count().then(result => {
                             resolve(result);
                         })
                 }).catch(err  =>{
@@ -51,6 +49,11 @@ export class DataEntryManager {
 
     public validateUser = async (data) => {
         let instance = CommonHelper.getCollection('dataMiningDB', 'users').find({email : data.email}).toArray();
+        return instance
+    }
+
+    public getRecordCount = async (data) => {
+        let instance = CommonHelper.getCollection('dataMiningDB', 'cThesisRecords').find({userId : data.userId}).count();
         return instance
     }
 

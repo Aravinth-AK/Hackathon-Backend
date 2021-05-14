@@ -7,8 +7,7 @@ export class SignUpSchema {
         university: joi.string().required(),
         email: joi.string().required(),
         password: joi.string().required(),
-        phoneNumber: joi.number().required(),
-        userId:joi.string().required()
+        phoneNumber: joi.number().required()
     })
 }
 }

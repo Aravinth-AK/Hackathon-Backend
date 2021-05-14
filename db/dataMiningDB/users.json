@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "609a32475055d7780c9b5e43"
+  },
+  "userName": "sdf",
+  "university": "sdfs",
+  "email": "sd",
+  "password": "sd",
+  "phoneNumber": 122
+},{
+  "_id": {
+    "$oid": "609a3323c80a2c1ea0129cb2"
+  },
+  "userName": "sdf",
+  "university": "sdfs",
+  "email": "qweqwewqe",
+  "password": "sd",
+  "phoneNumber": 122
+},{
+  "_id": {
+    "$oid": "609a399243f3fd73340b6b58"
+  },
+  "userName": "sdf",
+  "university": "sdfs",
+  "email": "newone",
+  "password": "sd",
+  "phoneNumber": 122
+},{
+  "_id": {
+    "$oid": "609c026f9b329a35dce307d3"
+  },
+  "userName": "sad",
+  "university": "asd",
+  "email": "asd",
+  "password": "asdadas",
+  "phoneNumber": 3243
+},{
+  "_id": {
+    "$oid": "609c03623d2dda47c0bc2e09"
+  },
+  "userName": "sa",
+  "university": "as",
+  "email": "as",
+  "password": "as",
+  "phoneNumber": 23
+},{
+  "_id": {
+    "$oid": "609c06133d2dda47c0bc2e0a"
+  },
+  "userName": "aravinth",
+  "university": "test",
+  "email": "atav",
+  "password": "123",
+  "phoneNumber": 8898
+},{
+  "_id": {
+    "$oid": "609c06403d2dda47c0bc2e0b"
+  },
+  "userName": "as",
+  "university": "asdad",
+  "email": "asdasdas",
+  "password": "asdsa",
+  "phoneNumber": 32
+}]

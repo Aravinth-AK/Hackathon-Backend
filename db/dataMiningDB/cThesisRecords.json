@@ -1,0 +1,92 @@
+[{
+  "_id": {
+    "$oid": "609d186c37e12e3b34c7af81"
+  },
+  "diseaseName": "sda",
+  "alternateDiseaseName": "asd",
+  "gene": "asd",
+  "inheritance": "asd",
+  "phenoTypeId": 2323,
+  "symptoms": "asdas",
+  "disorder": "sad",
+  "Diagnosis": "asd",
+  "userId": "609c03623d2dda47c0bc2e09"
+},{
+  "_id": {
+    "$oid": "609d5c190c91505f9c27b8dd"
+  },
+  "diseaseName": "diseases",
+  "alternateDiseaseName": "diseases",
+  "gene": "sa",
+  "inheritance": "asd",
+  "phenoTypeId": 32,
+  "symptoms": "asda",
+  "disorder": "asd",
+  "Diagnosis": "asd",
+  "userId": "609a32475055d7780c9b5e43"
+},{
+  "_id": {
+    "$oid": "609d5c230c91505f9c27b8e0"
+  },
+  "diseaseName": "diseases1",
+  "alternateDiseaseName": "diseases",
+  "gene": "sa",
+  "inheritance": "asd",
+  "phenoTypeId": 32,
+  "symptoms": "asda",
+  "disorder": "asd",
+  "Diagnosis": "asd",
+  "userId": "609a32475055d7780c9b5e43"
+},{
+  "_id": {
+    "$oid": "609d5c320c91505f9c27b8e1"
+  },
+  "diseaseName": "diseases1",
+  "alternateDiseaseName": "diseases1",
+  "gene": "sa",
+  "inheritance": "asd",
+  "phenoTypeId": 32,
+  "symptoms": "asda",
+  "disorder": "asd",
+  "Diagnosis": "asd",
+  "userId": "609a32475055d7780c9b5e43"
+},{
+  "_id": {
+    "$oid": "609d5c9a0c91505f9c27b8e4"
+  },
+  "diseaseName": "diseases1",
+  "alternateDiseaseName": "diseases2",
+  "gene": "sa",
+  "inheritance": "asd",
+  "phenoTypeId": 32,
+  "symptoms": "asda",
+  "disorder": "asd",
+  "Diagnosis": "asd",
+  "userId": "609a32475055d7780c9b5e43"
+},{
+  "_id": {
+    "$oid": "609d5ca20c91505f9c27b8e7"
+  },
+  "diseaseName": "diseases3",
+  "alternateDiseaseName": "diseases2",
+  "gene": "sa",
+  "inheritance": "asd",
+  "phenoTypeId": 32,
+  "symptoms": "asda",
+  "disorder": "asd",
+  "Diagnosis": "asd",
+  "userId": "609a32475055d7780c9b5e43"
+},{
+  "_id": {
+    "$oid": "609d5ca60c91505f9c27b8e8"
+  },
+  "diseaseName": "diseases3",
+  "alternateDiseaseName": "diseases3",
+  "gene": "sa",
+  "inheritance": "asd",
+  "phenoTypeId": 32,
+  "symptoms": "asda",
+  "disorder": "asd",
+  "Diagnosis": "asd",
+  "userId": "609a32475055d7780c9b5e43"
+}]
