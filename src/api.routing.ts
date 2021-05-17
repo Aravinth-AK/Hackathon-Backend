@@ -8,7 +8,8 @@ export class ApiRouting {
                 .unless( // This allows access to /token/sign without token authentication
                { path: [
                    '/api/hackathon/signup',
-                   '/api/hackathon/login'
+                   '/api/hackathon/login',
+                   '/api/hackathon/result',
                ]}
            ));
                 app.use(VoicePatternController.route, new VoicePatternController().router);

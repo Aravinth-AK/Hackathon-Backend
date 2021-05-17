@@ -57,6 +57,14 @@ export class DataEntryManager {
         return instance
     }
 
+    public resultData = async (limit) => {
+        let instance
+        if(!limit)
+         instance = CommonHelper.getCollection('dataMiningDB', 'cThesisRecords').aggregate([{"$group" : {_id:"$userId", submission:{$sum:1}}},{$sort:{submission:-1}},{ "$addFields": { "userId1": { "$toObjectId": "$_id" }}},{"$lookup":{from: "users",localField:"userId1",foreignField: "_id",as: "userDetails"}}]).toArray();
+        else
+        instance = CommonHelper.getCollection('dataMiningDB', 'cThesisRecords').aggregate([{"$group" : {_id:"$userId", submission:{$sum:1}}},{$sort:{submission:-1}},{ $limit : parseInt(limit) },{ "$addFields": { "userId1": { "$toObjectId": "$_id" }}},{"$lookup":{from: "users",localField:"userId1",foreignField: "_id",as: "userDetails"}}]).toArray();
+        return instance
+    }
 
 
 }

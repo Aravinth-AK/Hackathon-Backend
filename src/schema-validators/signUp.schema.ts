@@ -10,5 +10,6 @@ export class SignUpSchema {
         phoneNumber: joi.number().required()
     })
 }
+
 }
  
